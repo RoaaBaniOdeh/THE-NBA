@@ -8,20 +8,19 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
+    <div class="user-input">
+        <input id="ingred-name" placeholder="Write the ingred Name">
+        <button onclick="fetchRecip()">Get the recip</button>
+        <div id="content"></div>
+    </div>
     
-<div class="user-input">
-    <input id="team-name" placeholder="Write the Team Name">
-    <button onclick="fetchPlayers()">Get Roster</button>
-    <div id="content"></div>
-</div>
-
-
+    
 
 
 
     
 <script src="/jquery/dist/jquery.js"></script>
-
+<script src="render.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

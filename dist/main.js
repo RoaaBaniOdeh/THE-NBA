@@ -6,15 +6,18 @@
 
 
 
-const fetchPlayers = function(){
+
+
+
+const fetchRecip = function(){
     $("#content").empty()
-    let input=$("#team-name").val()
-   $.get(`team-players/${input}`,function(players){
-        players.forEach(player => {
-            $("#content").append(`<div class="player-info"><div>${player.firstName} ${player.lastName} </div>  <div>${player.jersey}</div> 
-            <img  src="https://nba-players.herokuapp.com/players/${player.lastName}/${player.firstName}">
+    let input=$("#ingred-name").val()
+   $.get(`/recipes/${input}`,function(){
+    recipes.forEach(meal => {
+            $("#content").append(`<div class="meal-info"><div href=${meal.href}>${meal.title} </div>  
+            <div><ul>${meal.ingredients}<ul</div> 
+            <img  src=${meal.thumbnail}>
             
-          <div>${player.pos} </div>  
             `)
         });
         
